@@ -1,0 +1,30 @@
+{
+  "name": "festivalmusica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonathan-Hdzu/festivalMusica.git"
+  },
+  "keywords": [
+    "SASS",
+    "NPM",
+    "Gulp"
+  ],
+  "author": "JonathanHdzu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jonathan-Hdzu/festivalMusica/issues"
+  },
+  "homepage": "https://github.com/Jonathan-Hdzu/festivalMusica#readme",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.76.0"
+  }
+}
