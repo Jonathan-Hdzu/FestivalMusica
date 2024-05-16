@@ -4,7 +4,7 @@
 "sass": "sass --watch src(src/scss):dest(build/css)"
 
 */
-import {src, dest} from 'gulp';
+import {src, dest, watch} from 'gulp';
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass'
 
@@ -14,7 +14,12 @@ const sass = gulpSass(dartSass)
 export function css( done ) {
     //Aca buscamos el archivo, luego ejecutamos la siguiente funcion a traves de pipes son funciones que toman el flujo de entrada y lo devuelven a otro pipe como salida para mantener el flujo de las tareas. El resultado de una tarea se convierte automáticamente en la entrada de la siguiente tarea
     src('src/scss/app.scss')
-        .pipe( sass() )
+        .pipe( sass().on('error', sass.logError) )
         .pipe( dest('build/css'))
     done()
+}
+
+//Con esto de aca decimos que vigile cada cambio en el archivo y ejecute la siguiente funcion
+export function dev() {
+    watch('src/scss/**/*.scss', css)
 }
