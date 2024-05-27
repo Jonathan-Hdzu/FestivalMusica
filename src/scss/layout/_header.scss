@@ -1,0 +1,35 @@
+@use 'base/variables'  as v;
+
+.header {
+    background-color: v.$verde;
+
+    .contenido-header {
+        padding: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    h1 {
+        color: v.$blanco;
+        margin: 0; //Por defecto todos tienen margen por lo que esto quedaba mas arriba antes de ponerle un margen de cero
+    }
+}
+
+.navegacion-principal {
+    display: flex;
+    gap: 2rem;
+    a {
+        color: v.$blanco;
+        font-size: 2.4rem;
+
+        &:hover {
+            color: v.$amarillo;
+        }
+    }
+}
+
+@mixin contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
